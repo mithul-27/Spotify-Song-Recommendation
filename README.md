@@ -14,5 +14,10 @@ This project implements a content-based recommendation system for songs using va
 - Data Loading: Load the dataset of songs with their attributes.
 - Feature Normalization: Normalize the relevant song features (danceability, energy, tempo, etc.) using Min-Max scaling.
 - Weighted Popularity Calculation: A custom function computes the popularity weight of songs based on how recently they were released.
-- Content-Based Filtering: A recommendation function computes cosine similarity between the input song’s features and all other songs in the dataset, then suggests the top similar songs.
+- Content-Based Filtering: A recommendation function computes cosine similarity between the input song’s features and all other songs in the dataset, then suggests the top similar songs.  
+
+- app.py: This py file contains the streamlit app part to display the recommendations based on the user input
+- User has to type the name of the song to get recommendation based on the song
+- If the song entered is in the database, recommended songs are shown. Else it displays that the songs entered is not found.
+- Based on the song entered, top 10 recommendations are displayed.
 ![image](https://github.com/user-attachments/assets/541b6086-ceea-4b03-a59b-18375eab42b4)
