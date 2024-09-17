@@ -1,13 +1,44 @@
 # Spotify-Song-Recommendation
 
 ## Project Overview
+This project implements a Music Recommendation System using the Spotify API and Python. It offers two recommendation approaches:
+- Content-based Filtering: Recommends songs similar to a user's chosen song based on audio features (danceability, energy, key, etc.).
+- Hybrid Approach: Combines content-based filtering with weighted popularity, prioritizing recently released songs with similar audio features.
 
-This project implements a content-based recommendation system for songs using various music features such as danceability, energy, and tempo. The system suggests songs that are similar to a given input song based on these musical attributes. The recommendations are generated using cosine similarity between normalized feature vectors.
+## Libraries
+- mysql-connector-python
+- pandas
+- numpy
+- sklearn
+- spotipy
+- datetime
 
 ## Features
-- Content-Based Recommendations: Generates song recommendations based on song attributes (e.g., tempo, danceability).
-- Weighted Popularity Score: Calculates popularity with a weight based on the song’s release date, giving more recent songs a higher score.
-- Feature Normalization: Music features are normalized using Min-Max scaling to ensure uniformity in the recommendation calculations.
+The music recommendation system project outlined in the previous response provides the following features:
+
+### Data Collection and Preprocessing:
+
+- Spotify API Integration: Collects music data from Spotify playlists using the Spotify API.
+- Data Extraction: Extracts relevant information from the collected data, such as track name, artists, album name, release date, and audio features.
+- Data Cleaning and Preparation: Cleans and prepares the extracted data for analysis and recommendation generation.
+- - Data Warehousing: Prepared songs data are pushed to MySQL database using MySQL-python connector.
+
+### Recommendation Algorithms:
+
+- Content-Based Filtering: Recommends songs similar to a user's chosen song based on audio features (danceability, energy, key, etc.).
+- Hybrid Approach: Combines content-based filtering with weighted popularity, prioritizing recently released songs with similar audio features.
+
+### Recommendation Generation:
+
+- Similarity Calculation: Calculates similarity scores between songs based on their audio features using cosine similarity.
+- Recommendation Selection: Identifies the most similar songs to the user's chosen song based on the calculated similarity scores.
+- Recommendation Output: Provides a list of recommended songs with their relevant information, such as track name, artists, album name, release date, and popularity.
+
+### Additional Features:
+
+- Weighted Popularity: Prioritizes recently released songs by assigning higher weights to their popularity scores.
+- Hybrid Approach: Combines content-based filtering and weighted popularity for more personalized recommendations.
+- User Interaction: Allows users to input song names to receive recommendations.
 
 ## Project Structure
 - Spotify_Recomendation.ipynb: This Jupyter Notebook contains the entire implementation of the recommendation system, including the following steps:
