@@ -14,14 +14,13 @@ This project implements a Music Recommendation System using the Spotify API and 
 - datetime
 
 ## Features
-The music recommendation system project outlined in the previous response provides the following features:
 
 ### Data Collection and Preprocessing:
 
 - Spotify API Integration: Collects music data from Spotify playlists using the Spotify API.
 - Data Extraction: Extracts relevant information from the collected data, such as track name, artists, album name, release date, and audio features.
 - Data Cleaning and Preparation: Cleans and prepares the extracted data for analysis and recommendation generation.
-- - Data Warehousing: Prepared songs data are pushed to MySQL database using MySQL-python connector.
+- Data Warehousing: Prepared song data are pushed to MySQL database using MySQL-python connector.
 
 ### Recommendation Algorithms:
 
