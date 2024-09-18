@@ -10,14 +10,23 @@ from sklearn.metrics.pairwise import cosine_similarity
 import mysql.connector
 
 
-mydb = mysql.connector.connect(
-  host = "gateway01.ap-southeast-1.prod.aws.tidbcloud.com",
-  port = 4000,
-  user = "     " #Use your username",
-  password = "     " #Use your password,
-  database = "    " #Add your database name
-)
-cursor=mydb.cursor()
+icon='https://avatars.githubusercontent.com/u/251374?v=4'
+st.set_page_config(page_title='Spotify Song Recommendation',page_icon=icon,initial_sidebar_state='expanded',
+                        layout='wide')
+
+title_text = '''<h1 style='font-size: 36px;color:#ff5a5f;text-align: center;'>Spotify Song Recommendation</h1><h2 style='font-size: 24px;color:#008891;text-align: center;'>Get Song Recommendation from your choice</h2>'''
+st.markdown(title_text, unsafe_allow_html=True)
+
+def get_connection():
+    return mysql.connector.connect(
+        host=st.secrets["database"]["host"],
+        user=st.secrets["database"]["user"],
+        password=st.secrets["database"]["password"],
+        database=st.secrets["database"]["database"],
+        port=int(st.secrets["database"]["port"])
+    )
+conn = get_connection()
+cursor = conn.cursor()
 
 cursor.execute("SELECT * FROM Tamil_songs")
 result = cursor.fetchall()
@@ -93,12 +102,6 @@ def hybrid_recommendations(input_song_name, num_recommendations=10, alpha=0.5):
     hybrid_recommendations = hybrid_recommendations[hybrid_recommendations['Track_Name'] != input_song_name]
 
     return hybrid_recommendations
-
-# Streamlit app
-st.set_page_config(page_title='Song_Recommendation',initial_sidebar_state='expanded', layout='wide')
-
-title_text = '''<h1 style='font-size: 36px;color:#7DDA58;text-align: center;'>Spotify Song Recommendations</h1><h2 style='font-size: 24px;color:#008891;text-align: center;'>Get Recommendation based on your choice</h2>'''
-st.markdown(title_text, unsafe_allow_html=True)
 
 # Input for the song name to get recommendations
 query = st.text_input('Enter a song name to get recommendations:')
