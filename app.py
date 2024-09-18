@@ -14,7 +14,7 @@ icon='https://avatars.githubusercontent.com/u/251374?v=4'
 st.set_page_config(page_title='Spotify Song Recommendation',page_icon=icon,initial_sidebar_state='expanded',
                         layout='wide')
 
-title_text = '''<h1 style='font-size: 36px;color:#ff5a5f;text-align: center;'>Spotify Song Recommendation</h1><h2 style='font-size: 24px;color:#008891;text-align: center;'>Get Song Recommendation from your choice</h2>'''
+title_text = '''<h1 style='font-size: 36px;color:#85D265;text-align: center;'>Spotify Song Recommendation</h1><h2 style='font-size: 24px;color:#61A446;text-align: center;'>Get Song Recommendation from your choice</h2>'''
 st.markdown(title_text, unsafe_allow_html=True)
 
 def get_connection():
