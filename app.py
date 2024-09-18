@@ -121,7 +121,7 @@ if query:
         st.dataframe(recommendations_df.style.set_properties(**{
                     'background-color': 'lightblue',
                     'color': 'black',
-                    'border-color': 'black'
+                    'border-color': 'white'
                 }))
 
     else:
