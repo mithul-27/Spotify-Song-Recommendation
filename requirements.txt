@@ -3,4 +3,4 @@ spotipy==2.24.0
 numpy==2.1.1
 scikit-learn==1.5.2
 DateTime==5.5
-mysql.connector
+mysql-connector-python
