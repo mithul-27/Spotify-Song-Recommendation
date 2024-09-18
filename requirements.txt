@@ -1,0 +1,9 @@
+pandas
+spotipy
+spotipy.oauth2
+numpy
+sklearn.model_selection
+sklearn.preprocessing
+datetime
+sklearn.metrics.pairwise
+mysql.connector
