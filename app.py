@@ -103,7 +103,7 @@ def hybrid_recommendations(input_song_name, num_recommendations=10, alpha=0.5):
 
     return hybrid_recommendations
 
-st.markdown("## :red[Available Songs:] Popular Tamil songs")
+st.markdown("### :red[Available Songs:] Popular Tamil songs")
 # Input for the song name to get recommendations
 query = st.text_input('Enter a song name to get recommendations:')
 
