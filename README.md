@@ -1,6 +1,7 @@
 # Spotify-Song-Recommendation
 
-Visit : https://spotify-song-recommendation-gtsxxef7z5zu8i7xrdvgi5.streamlit.app/
+Visit: https://spotify-song-recommendation-gtsxxef7z5zu8i7xrdvgi5.streamlit.app/  
+Please press "Yes, get this app back up" and wait for less than a minute in case the site is inactive.  
 
 ## Project Overview
 This project implements a Music Recommendation System using the Spotify API and Python. It offers two recommendation approaches:
